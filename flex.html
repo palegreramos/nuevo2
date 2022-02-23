@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+        :root {
+            font-family: 'Comic Neue', cursive;
+            font-size: xx-large; 
+            font-weight: bolder;
+        }
+        @keyframes cae {
+            from {left: 0; top: 0; transform: translate(-100%);}
+            to {left: 25%; top: 50%; }
+        }
+        @keyframes agranda {        
+            50% {flex-grow: 8;}
+        }
+
+        @keyframes cambiar {
+            from {flex-direction: row;}
+            33% {flex-direction: row-reverse;}
+            66% {flex-direction: column-reverse; }
+            to {flex-direction: column;}
+            
+        }
+        body > div {
+            position: fixed;
+            top:0; left:0;
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+            align-items: center;
+            animation: cae 3s ease-in-out 0s 1 normal forwards,cambiar 10s linear 21s infinite alternate;
+        }
+        div.nums > div {
+            animation: agranda 3s linear 1 alternate backwards;
+            flex-grow: 1;
+            text-align: center;
+        }
+    
+        div.nums > div:nth-child(1) {
+            background-color: aqua;
+            animation-delay: 3s;
+        }
+        div.nums> div:nth-child(2) {
+            background-color: blueviolet;
+            animation-delay: 6s;
+        }
+        div.nums> div:nth-child(3) {
+            background-color: pink;
+            animation-delay: 9s;
+        }
+        div.nums> div:nth-child(4) {
+            background-color: greenyellow;
+            animation-delay: 12s;
+        }
+        div.nums> div:nth-child(5) {
+            background-color: royalblue;
+            animation-delay: 15s;
+        }
+        div.nums> div:nth-child(6) {
+            background-color: chocolate;
+            animation-delay: 18s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nums">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
